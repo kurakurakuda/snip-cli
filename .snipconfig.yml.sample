@@ -1,0 +1,4 @@
+command: 
+  run:
+   encoding:  # Allows you to specify the character encoding for the output of runCommand(default: utf-8). Configurable in both local and global.
+working_dir:  # Working directory for snip operations (default: current directory). Local only.

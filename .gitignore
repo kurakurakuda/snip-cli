@@ -1,0 +1,8 @@
+node_modules/
+dist/
+coverage/
+.vscode/
+.nyc_output/
+samples/tests/
+
+/.snipconfig.yml

@@ -1,0 +1,21 @@
+@description: "this is the sample description, in Japanese, これは、サンプル用の説明です。"
+@description: sample-description
+@description: サンプルの説明
+@tags: dev, utils
+@tags: [test, "common", "really, test ?"]
+
+@command: build {
+	cmd: "npm run build",
+	desc: .';、。；：,
+	tags: npm
+}
+
+@command: テストサンプル {
+	"cmd": "npm run dev",
+	"desc": "これはトークンが適切に判別できているかのテストです 　,.{}[]\"'\n\r;:、。；：",
+	"tags": [dev, "server"],
+	object: {
+		key: value,
+		"x" : "y"
+	}
+}

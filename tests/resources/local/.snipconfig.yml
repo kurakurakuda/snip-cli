@@ -1,0 +1,7 @@
+command: 
+  run:
+   encoding: cp932
+# When running `index.spect.ts`, the current directory (`process.cwd`) is overwritten with `tests/resource/local`.
+# However, since the actual working directory is located under `{root}/samples`, 
+# the relative path to navigate is defined there.
+working_dir: ../../../samples/tests

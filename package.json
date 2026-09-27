@@ -1,0 +1,67 @@
+{
+  "name": "snip-cli",
+  "version": "1.0.0",
+  "description": "A CLI for storing, finding, and running reusable commands in .snip files",
+  "main": "dist/index.js",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "snip": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node src/index.ts",
+    "test": "npm run build && mocha",
+    "test:watch": "mocha --watch",
+    "test:coverage": "npm run build && nyc mocha"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@chevrotain/types": "^11.0.3",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/chai": "^5.2.2",
+    "@types/js-yaml": "^4.0.9",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.19.19",
+    "@types/sinon": "^17.0.4",
+    "@types/sinon-chai": "^4.0.0",
+    "@types/yargs": "^17.0.33",
+    "chai": "^5.2.1",
+    "mocha": "^11.7.1",
+    "nyc": "^17.1.0",
+    "sinon": "^21.0.0",
+    "sinon-chai": "^4.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "chevrotain": "^11.0.3",
+    "iconv-lite": "^0.7.2",
+    "js-yaml": "^4.1.1",
+    "yargs": "^17.7.2"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "check-coverage": true,
+    "all": true,
+    "include": [
+      "src/**/!(*.test.*).[tj]s?(x)"
+    ],
+    "exclude": [
+      "src/_tests_/**/*.*"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "coverage"
+  }
+}
